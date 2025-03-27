@@ -152,6 +152,7 @@ public class MainWindow extends JFrame {
         if (this.deleteButton == null) {
             this.deleteButton = new JButton("Delete");
             this.deleteButton.setIcon(createIcon("bin.png"));
+            this.deleteButton.setBackground(Color.RED);
 
             this.deleteButton.addMouseListener(new MouseAdapter() {
                 @Override
@@ -188,6 +189,7 @@ public class MainWindow extends JFrame {
         if (this.addTaskButton == null) {
             this.addTaskButton = new JButton("Add");
             this.addTaskButton.setIcon(createIcon("diary.png"));
+            this.addTaskButton.setBackground(Color.GREEN);
 
             this.addTaskButton.addMouseListener(new MouseAdapter() {
                 @Override
@@ -209,6 +211,7 @@ public class MainWindow extends JFrame {
     private JLabel getStatusBar() {
         if (this.statusBar == null) {
             this.statusBar = new JLabel("Number of tasks: 0");
+            this.statusBar.setForeground(Color.MAGENTA);
             this.todoListModel.addListDataListener(new ListDataListener() {
                 @Override
                 public void contentsChanged(ListDataEvent e) {
